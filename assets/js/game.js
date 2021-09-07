@@ -46,7 +46,6 @@ var fight = function (enemy) {
             playerInfo.money = playerInfo.money + 20;
             // leave while () loop since enemy is dead 
             break;
-
         } else {
             window.alert(enemy.name + " still has " + enemy.health + " health left.");
         }
@@ -165,6 +164,7 @@ var playerInfo = {
     health: 100,
     attach: 10,
     money: 10,
+
     reset: function () {
         this.health = 100;
         this.money = 10;
@@ -178,7 +178,7 @@ var playerInfo = {
         }
         else {
             window.alert("You don't have enough moneh!");
-        }
+        };
     },
     upgradeAttack: function () {
         if (this.money >= 7) {
@@ -195,20 +195,25 @@ var playerInfo = {
 // // You can also log multiple values at once like this
 // console.log(playerInfo.name, playerInfo.attack, playerInfo.health);
 
-    var enemyInfo = [
-        {
-            name: "Roberto",
-            attack: randomNumber(10, 14)
-        },
-        {
-            name: "Amy Android",
-            attack: randomNumber(10, 14)
-        },
-        {
-            name: "robo Trumble",
-            attack: randomNumber(10, 14)
-        }
-    ];
+var enemyInfo = [
+    {
+        name: "Roberto",
+        attack: randomNumber(10, 14)
+    },
+    {
+        name: "Amy Android",
+        attack: randomNumber(10, 14)
+    },
+    {
+        name: "robo Trumble",
+        attack: randomNumber(10, 14)
+    }
+];
 
-    //start the game when the paoge loads
-    startGame();
+console.log(enemyInfo);
+console.log(enemyInfo[0]);
+console.log(enemyInfo[0].name);
+console.log(enemyInfo[0]["attack"]);
+
+//start the game when the paoge loads
+startGame();
